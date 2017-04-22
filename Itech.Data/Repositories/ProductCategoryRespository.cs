@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Itech.Data.Repositories
 {
-    public interface IProductCategoryRespository
+    public interface IProductCategoryRespository : IRepository<ProductCategory>
     {
         IEnumerable<ProductCategory> GetByAlias(string alias);
     }

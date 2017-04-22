@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace Itech.Data.Infrastructure
 {
-    public abstract class RepositoryBase<T> where T : class
+    public abstract class RepositoryBase<T> : IRepository<T> where T : class
     {
         #region Properties
 
@@ -47,6 +47,12 @@ namespace Itech.Data.Infrastructure
 
         public virtual void Delete(T entity)
         {
+            dbSet.Remove(entity);
+        }
+
+        public virtual void Delete(int entityID)
+        {
+            var entity = dbSet.Find(entityID);
             dbSet.Remove(entity);
         }
 

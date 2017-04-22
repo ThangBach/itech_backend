@@ -3,7 +3,7 @@ using Itech.Model.Models;
 
 namespace Itech.Data.Repositories
 {
-    public interface IOrderRepository
+    public interface IOrderRepository : IRepository<Order>
     {
     }
 

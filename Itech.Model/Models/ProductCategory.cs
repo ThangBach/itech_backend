@@ -1,5 +1,4 @@
-﻿using Itech.Model.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -7,18 +6,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Itech.Model.Models
 {
     [Table("ProductCategories")]
-    public class ProductCategory: IAuditable, ISwitchable
+    public class ProductCategory : IAuditable, ISwitchable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
+
         [Required]
         [MaxLength(256)]
         public string Name { get; set; }
+
         [Required]
         [MaxLength(256)]
-        [Column(TypeName ="varchar")]
+        [Column(TypeName = "varchar")]
         public string Alias { get; set; }
+
         public string Description { get; set; }
         public int ParentID { get; set; }
         public int DisplayOrder { get; set; }
@@ -34,6 +36,5 @@ namespace Itech.Model.Models
         public int ViewCount { get; set; }
 
         public virtual IEnumerable<Product> Products { get; set; }
-
     }
 }

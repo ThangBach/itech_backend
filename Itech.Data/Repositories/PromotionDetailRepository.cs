@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Itech.Data.Repositories
 {
-    public interface IPromotionDetailRepository
+    public interface IPromotionDetailRepository : IRepository<PromotionDetail>
     {
 
     }

@@ -3,7 +3,7 @@ using Itech.Model.Models;
 
 namespace Itech.Data.Repositories
 {
-    public interface IFooterRepository
+    public interface IFooterRepository :IRepository<Footer>
     {
     }
 

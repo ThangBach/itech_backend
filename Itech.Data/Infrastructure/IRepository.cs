@@ -15,6 +15,8 @@ namespace Itech.Data.Infrastructure
         // xoa
         void Delete(T entity);
 
+        void Delete(int entityID);
+
         // xoa nhieu
         void DeleteMulti(Expression<Func<T, bool>> where);
 
