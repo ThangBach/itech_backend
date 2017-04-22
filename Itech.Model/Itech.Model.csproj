@@ -49,12 +49,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\Auditable.cs" />
+    <Compile Include="Abstract\IAuditable.cs" />
+    <Compile Include="Abstract\ISwitchable.cs" />
+    <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Abstract\Switchable.cs" />
+    <Compile Include="Models\Footer.cs" />
+    <Compile Include="Models\MemberCategory.cs" />
+    <Compile Include="Models\Menu.cs" />
+    <Compile Include="Models\MenuGroup.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductCategory.cs" />
+    <Compile Include="Models\Promotion.cs" />
+    <Compile Include="Models\PromotionDetail.cs" />
+    <Compile Include="Models\Rate.cs" />
+    <Compile Include="Models\SupportOnline.cs" />
+    <Compile Include="Models\SystemConfig.cs" />
+    <Compile Include="Models\VisitorStatistic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
