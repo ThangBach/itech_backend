@@ -1,4 +1,4 @@
-﻿using Itech.Model.Abstract;
+﻿using Itech.Model.Models;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -39,5 +39,8 @@ namespace Itech.Model.Models
 
         [ForeignKey("CategoryID")]
         public virtual ProductCategory ProductCategory { get; set; }
+        public int BrandID { get; set; }
+        [ForeignKey("BrandID")]
+        public virtual Brand Brand { get; set; }
     }
 }

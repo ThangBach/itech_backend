@@ -1,9 +1,8 @@
-﻿using Itech.Model.Models;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Itech.Model.Abstract
+namespace Itech.Model.Models
 {
     [Table("Members")]
     public class Member : IAuditable, ISwitchable

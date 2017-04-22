@@ -7,9 +7,11 @@ namespace Itech.Model.Models
     public class PromotionDetail
     {
         [Key]
+        [Column(Order = 1)]
         public int ProductID { get; set; }
 
         [Key]
+        [Column(Order = 2)]
         public int PromotionID { get; set; }
 
         public int Percent { get; set; }

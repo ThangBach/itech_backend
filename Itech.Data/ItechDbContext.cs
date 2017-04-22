@@ -1,12 +1,11 @@
-﻿using Itech.Model.Abstract;
-using Itech.Model.Models;
+﻿using Itech.Model.Models;
 using System.Data.Entity;
 
 namespace Itech.Data
 {
-    public class ItechDbContext: DbContext
+    public class ItechDbContext : DbContext
     {
-        public ItechDbContext() : base("ItechConnection")
+        public ItechDbContext() : base("ItechShop")
         {
             // khi đã có db hoặc tb thì sẽ ko tạo thêm
             this.Configuration.LazyLoadingEnabled = false;
@@ -33,6 +32,5 @@ namespace Itech.Data
         {
             base.OnModelCreating(modelBuilder);
         }
-
     }
 }

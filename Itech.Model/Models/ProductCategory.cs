@@ -1,4 +1,4 @@
-﻿using Itech.Model.Abstract;
+﻿using Itech.Model.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

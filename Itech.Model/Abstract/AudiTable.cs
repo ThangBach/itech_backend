@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Itech.Model.Abstract
+namespace Itech.Model.Models
 {
     public abstract class Auditable : IAuditable
     {

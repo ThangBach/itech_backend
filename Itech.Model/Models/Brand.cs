@@ -1,5 +1,7 @@
-﻿using Itech.Model.Abstract;
+﻿using Itech.Model.Models;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -21,5 +23,8 @@ namespace Itech.Model.Models
         public string CreateBy { get; set; }
         public DateTime? UpdateDate { get; set; }
         public string UpdateBy { get; set; }
+        public bool status { get; set; }
+
+        public IEnumerable<Product> Products { get; set; }
     }
 }

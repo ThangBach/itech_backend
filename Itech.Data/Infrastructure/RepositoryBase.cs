@@ -21,7 +21,7 @@ namespace Itech.Data.Infrastructure
 
         protected ItechDbContext DbContext
         {
-            get { return dataContext ?? (dataContext = DbFactory.Init()); }
+            get { return dataContext ?? (dataContext = DbFactory.init()); }
         }
 
         #endregion Properties
