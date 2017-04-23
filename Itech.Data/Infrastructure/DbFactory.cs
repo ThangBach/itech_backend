@@ -12,11 +12,6 @@ namespace Itech.Data.Infrastructure
 
         public ItechDbContext init()
         {
-            throw new NotImplementedException();
-        }
-
-        public ItechDbContext Init()
-        {
             return dbContext ?? (dbContext = new ItechDbContext());
         }
 

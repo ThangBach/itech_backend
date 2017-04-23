@@ -9,6 +9,7 @@ namespace Itech.Model.Models
     public class Order : ISwitchable
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
         [Required]
@@ -27,10 +28,15 @@ namespace Itech.Model.Models
         public string CustomerMobile { get; set; }
 
         public string CustomerMessage { get; set; }
+
         public DateTime OrderDate { get; set; }
+
         public DateTime OrderDeliveryDate { get; set; }
+
         public string PaymentMethod { get; set; }
+
         public bool PaymentStatus { get; set; }
+
         public bool Status { get; set; }
     }
 }

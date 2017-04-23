@@ -10,12 +10,16 @@ namespace Itech.Model.Models
     public class Promotion : IAuditable, ISwitchable
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
+
         [Required]
         [MaxLength(500)]
         public string Name { get; set; }
+
         [Required]
         public DateTime StartDate { get; set; }
+
         [Required]
         public DateTime EndDate { get; set; }
         public string Image { get; set; }
@@ -27,6 +31,7 @@ namespace Itech.Model.Models
         public DateTime? UpdateDate { get; set; }
 
         public string UpdateBy { get; set; }
+
         [Required]
         public bool Status { get; set; }
     }

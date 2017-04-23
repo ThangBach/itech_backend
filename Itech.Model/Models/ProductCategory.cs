@@ -22,17 +22,25 @@ namespace Itech.Model.Models
         public string Alias { get; set; }
 
         public string Description { get; set; }
+
         public int ParentID { get; set; }
+
         public int DisplayOrder { get; set; }
+
         public string Image { get; set; }
-        public string MoreImages { get; set; }
-        public decimal Price { get; set; }
-        public string CreateBy { get; set; }
-        public DateTime? CreateDate { get; set; }
+
         public bool Status { get; set; }
+
+        public string CreateBy { get; set; }
+
+        public DateTime? CreateDate { get; set; }
+
         public string UpdateBy { get; set; }
+
         public DateTime? UpdateDate { get; set; }
+
         public bool? HomeFlag { get; set; }
+
         public int ViewCount { get; set; }
 
         public virtual IEnumerable<Product> Products { get; set; }

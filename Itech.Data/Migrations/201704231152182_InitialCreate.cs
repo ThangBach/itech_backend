@@ -3,7 +3,7 @@ namespace Itech.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialDB : DbMigration
+    public partial class InitialCreate : DbMigration
     {
         public override void Up()
         {
@@ -13,7 +13,7 @@ namespace Itech.Data.Migrations
                     {
                         ID = c.Int(nullable: false, identity: true),
                         Name = c.String(nullable: false, maxLength: 256),
-                        Alias = c.String(maxLength: 8000, unicode: false),
+                        Alias = c.String(nullable: false, maxLength: 8000, unicode: false),
                         CreateDate = c.DateTime(),
                         CreateBy = c.String(),
                         UpdateDate = c.DateTime(),
@@ -131,9 +131,9 @@ namespace Itech.Data.Migrations
                         Image = c.String(nullable: false),
                         MoreImages = c.String(),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Status = c.Boolean(nullable: false),
                         CreateBy = c.String(),
                         CreateDate = c.DateTime(),
-                        Status = c.Boolean(nullable: false),
                         UpdateBy = c.String(),
                         UpdateDate = c.DateTime(),
                         HomeFlag = c.Boolean(),
@@ -160,11 +160,9 @@ namespace Itech.Data.Migrations
                         ParentID = c.Int(nullable: false),
                         DisplayOrder = c.Int(nullable: false),
                         Image = c.String(),
-                        MoreImages = c.String(),
-                        Price = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Status = c.Boolean(nullable: false),
                         CreateBy = c.String(),
                         CreateDate = c.DateTime(),
-                        Status = c.Boolean(nullable: false),
                         UpdateBy = c.String(),
                         UpdateDate = c.DateTime(),
                         HomeFlag = c.Boolean(),
@@ -251,7 +249,7 @@ namespace Itech.Data.Migrations
                 "dbo.VisitorStatistics",
                 c => new
                     {
-                        ID = c.Guid(nullable: false),
+                        ID = c.Guid(nullable: false, identity: true),
                         VisitedDate = c.DateTime(nullable: false),
                         IPAddress = c.String(maxLength: 50),
                     })

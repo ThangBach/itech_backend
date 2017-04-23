@@ -39,7 +39,8 @@ namespace Itech.Service
 
         public IEnumerable<Brand> GetAll()
         {
-            return _brandRepository.GetAll(new string[] { "Products" });
+            //return _brandRepository.GetAll(new string[] { "Products" });
+            return _brandRepository.GetAll();
         }
 
         public void Update(Brand brand)
