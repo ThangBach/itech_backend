@@ -27,6 +27,7 @@ namespace Itech.Data
         public DbSet<SupportOnline> SupportOnlines { get; set; }
         public DbSet<SystemConfig> SystemConfigs { get; set; }
         public DbSet<VisitorStatistic> VisitorStatistics { get; set; }
+        public DbSet<Error> Errors { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

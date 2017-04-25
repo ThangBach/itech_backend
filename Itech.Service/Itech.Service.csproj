@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrandService.cs" />
+    <Compile Include="ErrorService.cs" />
     <Compile Include="FooterService.cs" />
     <Compile Include="IRateReposotory.cs" />
     <Compile Include="MemberCategoryService.cs" />
