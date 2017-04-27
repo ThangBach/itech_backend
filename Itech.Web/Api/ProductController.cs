@@ -1,9 +1,13 @@
-﻿using Itech.Model.Models;
+﻿using AutoMapper;
+using Itech.Model.Models;
 using Itech.Service;
 using Itech.Web.Infrastructure.Core;
+using Itech.Web.Models;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using Itech.Web.Infrastructure.Extensions;
 
 namespace Itech.Web.App_Data
 {
@@ -24,12 +28,14 @@ namespace Itech.Web.App_Data
             {
                 HttpResponseMessage response = null;
                 var listProduct = _productService.GetAll();
-                response = request.CreateResponse(HttpStatusCode.OK, listProduct);
+                var listProductVm = Mapper.Map<List<ProductViewModel>>(listProduct);
+
+                response = request.CreateResponse(HttpStatusCode.OK, listProductVm);
                 return response;
             });
         }
-
-        public HttpResponseMessage Post(HttpRequestMessage request, Product product)
+        [Route("Add")]
+        public HttpResponseMessage Post(HttpRequestMessage request, ProductViewModel productVM)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -40,17 +46,22 @@ namespace Itech.Web.App_Data
                 }
                 else
                 {
-                    var pd = _productService.Add(product);
+                    Product newProduct = new Product();
+                    newProduct.UpdateProduct(productVM);
+
+                    var product = _productService.Add(newProduct);
                     _productService.SaveChanges();
 
-                    response = request.CreateResponse(HttpStatusCode.Created, pd);
+                    response = request.CreateResponse(HttpStatusCode.Created, product);
 
                 }
                 return response;
             });
         }
 
-        public HttpResponseMessage Put(HttpRequestMessage request, Product product)
+
+        [Route("Update")]
+        public HttpResponseMessage Put(HttpRequestMessage request, ProductViewModel productVM)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -61,7 +72,10 @@ namespace Itech.Web.App_Data
                 }
                 else
                 {
-                    _productService.Update(product);
+                    var productDB = _productService.GetByID(productVM.ID);
+                    productDB.UpdateProduct(productVM);
+
+                    _productService.Update(productDB);
                     _productService.SaveChanges();
 
                     response = request.CreateResponse(HttpStatusCode.OK);
@@ -71,6 +85,7 @@ namespace Itech.Web.App_Data
             });
         }
 
+        [Route("Delete")]
         public HttpResponseMessage Delete(HttpRequestMessage request, int productID)
         {
             return CreateHttpResponse(request, () =>
