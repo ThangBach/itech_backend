@@ -1,9 +1,9 @@
 ﻿using Itech.Model.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
-
 namespace Itech.Data
 {
-    public class ItechDbContext : DbContext
+    public class ItechDbContext : IdentityDbContext<ApplicationUser>
     {
         public ItechDbContext() : base("ItechShop")
         {
@@ -29,6 +29,12 @@ namespace Itech.Data
         public DbSet<VisitorStatistic> VisitorStatistics { get; set; }
         public DbSet<Error> Errors { get; set; }
 
+        public static ItechDbContext Create()
+        {
+            return new ItechDbContext();
+        }
+
+        // được ghi đè đẻ có thể thêm hoặc chỉnh sửa database
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

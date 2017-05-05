@@ -13,7 +13,7 @@ namespace Itech.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201704231152182_InitialCreate"; }
+            get { return "201705042134598_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

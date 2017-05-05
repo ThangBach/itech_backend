@@ -32,7 +32,7 @@ namespace Itech.Model.Models
         public string MoreImages { get; set; }
 
         [Required]
-        public decimal Price { get; set; }
+        public string Price { get; set; }
 
         public bool Status { get; set; }
 

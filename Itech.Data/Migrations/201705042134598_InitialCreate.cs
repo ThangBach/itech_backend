@@ -23,6 +23,17 @@ namespace Itech.Data.Migrations
                 .PrimaryKey(t => t.ID);
             
             CreateTable(
+                "dbo.Errors",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                        Message = c.String(),
+                        StackTrace = c.String(),
+                        CreateDate = c.DateTime(nullable: false),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
                 "dbo.Footers",
                 c => new
                     {
@@ -130,7 +141,7 @@ namespace Itech.Data.Migrations
                         DisplayOrder = c.Int(nullable: false),
                         Image = c.String(nullable: false),
                         MoreImages = c.String(),
-                        Price = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        Price = c.String(nullable: false),
                         Status = c.Boolean(nullable: false),
                         CreateBy = c.String(),
                         CreateDate = c.DateTime(),
@@ -157,8 +168,8 @@ namespace Itech.Data.Migrations
                         Name = c.String(nullable: false, maxLength: 256),
                         Alias = c.String(nullable: false, maxLength: 256, unicode: false),
                         Description = c.String(),
-                        ParentID = c.Int(nullable: false),
-                        DisplayOrder = c.Int(nullable: false),
+                        ParentID = c.Int(),
+                        DisplayOrder = c.Int(),
                         Image = c.String(),
                         Status = c.Boolean(nullable: false),
                         CreateBy = c.String(),
@@ -294,6 +305,7 @@ namespace Itech.Data.Migrations
             DropTable("dbo.Members");
             DropTable("dbo.MemberCategories");
             DropTable("dbo.Footers");
+            DropTable("dbo.Errors");
             DropTable("dbo.Brands");
         }
     }

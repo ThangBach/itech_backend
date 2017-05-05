@@ -26,6 +26,7 @@ namespace Itech.Unit.ServiceTest
             _mockBrandRepository = new Mock<IBrandRepository>();
             _mockUnitOfWork = new Mock<IUnitOfWork>();
             _brandService = new BrandService(_mockBrandRepository.Object, _mockUnitOfWork.Object);
+
             _listBrand = new List<Brand>()
             {
                 new Brand() {ID=1 ,Name="Sony", Alias="so-ny",status=true},

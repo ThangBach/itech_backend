@@ -7,13 +7,13 @@ namespace Itech.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AddErrorTable : IMigrationMetadata
+    public sealed partial class IntergrateAspnetIdentity : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddErrorTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(IntergrateAspnetIdentity));
         
         string IMigrationMetadata.Id
         {
-            get { return "201704251642051_AddErrorTable"; }
+            get { return "201705051909304_Intergrate-AspnetIdentity"; }
         }
         
         string IMigrationMetadata.Source

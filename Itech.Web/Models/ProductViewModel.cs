@@ -12,7 +12,7 @@ namespace Itech.Web.Models
         public int DisplayOrder { get; set; }
         public string Image { get; set; }
         public string MoreImages { get; set; }
-        public decimal Price { get; set; }
+        public string Price { get; set; }
         public bool Status { get; set; }
         public string CreateBy { get; set; }
         public DateTime? CreateDate { get; set; }

@@ -29,7 +29,7 @@ namespace Itech.Unit.RepositoryTest
 
 
             Assert.IsNotNull(listBrand);
-            Assert.AreEqual(1, listBrand.Count());
+            Assert.AreEqual(2, listBrand.Count());
  
         }
 
@@ -45,7 +45,7 @@ namespace Itech.Unit.RepositoryTest
             unitOfWork.Commit();
 
             Assert.IsNotNull(result);
-            Assert.AreEqual(1, result.ID);
+            Assert.AreEqual(3, result.ID);
         }
     }
 }
