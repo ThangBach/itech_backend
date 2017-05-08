@@ -41,12 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrandService.cs" />
+    <Compile Include="DiscountService.cs" />
     <Compile Include="ErrorService.cs" />
     <Compile Include="FooterService.cs" />
     <Compile Include="MenuGroupService.cs" />
     <Compile Include="MenuService.cs" />
     <Compile Include="OrderDetailService.cs" />
     <Compile Include="OrderService.cs" />
+    <Compile Include="PriceService.cs" />
     <Compile Include="ProductCategoryService.cs" />
     <Compile Include="ProductService.cs" />
     <Compile Include="PromotionDetailService.cs" />

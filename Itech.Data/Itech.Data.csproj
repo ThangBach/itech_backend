@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201705080542229_InitialCreate.Designer.cs">
       <DependentUpon>201705080542229_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705081638551_Intergrate-AspnetIdentity.cs" />
+    <Compile Include="Migrations\201705081638551_Intergrate-AspnetIdentity.Designer.cs">
+      <DependentUpon>201705081638551_Intergrate-AspnetIdentity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ApplicationUserRepository.cs" />
@@ -107,6 +111,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705080542229_InitialCreate.resx">
       <DependentUpon>201705080542229_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705081638551_Intergrate-AspnetIdentity.resx">
+      <DependentUpon>201705081638551_Intergrate-AspnetIdentity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
