@@ -65,25 +65,22 @@
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="ItechDbContext.cs" />
-    <Compile Include="Migrations\201705042134598_InitialCreate.cs" />
-    <Compile Include="Migrations\201705042134598_InitialCreate.Designer.cs">
-      <DependentUpon>201705042134598_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201705051909304_Intergrate-AspnetIdentity.cs" />
-    <Compile Include="Migrations\201705051909304_Intergrate-AspnetIdentity.Designer.cs">
-      <DependentUpon>201705051909304_Intergrate-AspnetIdentity.cs</DependentUpon>
+    <Compile Include="Migrations\201705080542229_InitialCreate.cs" />
+    <Compile Include="Migrations\201705080542229_InitialCreate.Designer.cs">
+      <DependentUpon>201705080542229_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ApplicationUserRepository.cs" />
     <Compile Include="Repositories\BrandRepository.cs" />
+    <Compile Include="Repositories\DiscountRepository.cs" />
     <Compile Include="Repositories\ErrorRepository.cs" />
     <Compile Include="Repositories\FooterRepository.cs" />
-    <Compile Include="Repositories\MemberCategoryRepository.cs" />
-    <Compile Include="Repositories\MemberRepository.cs" />
     <Compile Include="Repositories\MenuGroupRepository.cs" />
     <Compile Include="Repositories\MenuRepository.cs" />
     <Compile Include="Repositories\OrderDetailRepository.cs" />
     <Compile Include="Repositories\OrderRepository.cs" />
+    <Compile Include="Repositories\PriceRepository.cs" />
     <Compile Include="Repositories\ProductCategoryRespository.cs" />
     <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Repositories\PromotionDetailRepository.cs" />
@@ -108,11 +105,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201705042134598_InitialCreate.resx">
-      <DependentUpon>201705042134598_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705051909304_Intergrate-AspnetIdentity.resx">
-      <DependentUpon>201705051909304_Intergrate-AspnetIdentity.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705080542229_InitialCreate.resx">
+      <DependentUpon>201705080542229_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

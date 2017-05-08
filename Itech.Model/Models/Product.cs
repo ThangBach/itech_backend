@@ -24,15 +24,15 @@ namespace Itech.Model.Models
         [Required]
         public string Description { get; set; }
 
-        public int DisplayOrder { get; set; }
+        [Required]
+        public string Price { get; set; }
 
         [Required]
         public string Image { get; set; }
 
         public string MoreImages { get; set; }
 
-        [Required]
-        public string Price { get; set; }
+        public int? DisplayOrder { get; set; }
 
         public bool Status { get; set; }
 
@@ -67,5 +67,7 @@ namespace Itech.Model.Models
         public virtual IEnumerable<OrderDetail> OrderDetails { get; set; }
 
         public virtual IEnumerable<PromotionDetail> PromotionDetails { get; set; }
+
+        public virtual IEnumerable<Price> Prices { get; set; }
     }
 }

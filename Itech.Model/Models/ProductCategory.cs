@@ -21,13 +21,11 @@ namespace Itech.Model.Models
         [Column(TypeName = "varchar")]
         public string Alias { get; set; }
 
-        public string Description { get; set; }
+        public string Image { get; set; }
 
         public int? ParentID { get; set; }
 
         public int? DisplayOrder { get; set; }
-
-        public string Image { get; set; }
 
         public bool Status { get; set; }
 
@@ -39,10 +37,8 @@ namespace Itech.Model.Models
 
         public DateTime? UpdateDate { get; set; }
 
-        public bool? HomeFlag { get; set; }
-
-        public int ViewCount { get; set; }
-
         public virtual IEnumerable<Product> Products { get; set; }
+
+        public virtual IEnumerable<DiscountDetail> DiscountDetails { get; set; }
     }
 }

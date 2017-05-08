@@ -32,17 +32,14 @@ namespace Itech.Web.Infrastructure.Extensions
             productCategory.ID = productCategoryViewModel.ID;
             productCategory.Name = productCategoryViewModel.Name;
             productCategory.Alias = productCategoryViewModel.Alias;
-            productCategory.Description = productCategoryViewModel.Description;
             productCategory.DisplayOrder = productCategoryViewModel.DisplayOrder;
             productCategory.Image = productCategoryViewModel.Image;
             productCategory.ParentID = productCategoryViewModel.ParentID;
             productCategory.Status = productCategoryViewModel.Status;
             productCategory.UpdateBy = productCategoryViewModel.UpdateBy;
             productCategory.UpdateDate = productCategoryViewModel.UpdateDate;
-            productCategory.ViewCount = productCategoryViewModel.ViewCount;
             productCategory.CreateBy = productCategoryViewModel.CreateBy;
             productCategory.CreateDate = productCategoryViewModel.CreateDate;
-            productCategory.HomeFlag=productCategoryViewModel.HomeFlag;
         }
     }
 }

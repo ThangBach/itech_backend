@@ -43,9 +43,6 @@
     <Compile Include="BrandService.cs" />
     <Compile Include="ErrorService.cs" />
     <Compile Include="FooterService.cs" />
-    <Compile Include="IRateReposotory.cs" />
-    <Compile Include="MemberCategoryService.cs" />
-    <Compile Include="MemberService.cs" />
     <Compile Include="MenuGroupService.cs" />
     <Compile Include="MenuService.cs" />
     <Compile Include="OrderDetailService.cs" />

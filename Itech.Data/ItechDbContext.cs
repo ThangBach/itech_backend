@@ -13,8 +13,6 @@ namespace Itech.Data
 
         public DbSet<Brand> Brandss { get; set; }
         public DbSet<Footer> Footers { get; set; }
-        public DbSet<Member> Members { get; set; }
-        public DbSet<MemberCategory> MemberCategorys { get; set; }
         public DbSet<Menu> Menus { get; set; }
         public DbSet<MenuGroup> MenuGroups { get; set; }
         public DbSet<Order> Orders { get; set; }
@@ -24,6 +22,9 @@ namespace Itech.Data
         public DbSet<Promotion> Promotions { get; set; }
         public DbSet<PromotionDetail> PromotionDetails { get; set; }
         public DbSet<Rate> Rates { get; set; }
+        public DbSet<Price> Prices { get; set; }
+        public DbSet<Discount> Discounts { get; set; }
+        public DbSet<DiscountDetail> DiscountDetails { get; set; }
         public DbSet<SupportOnline> SupportOnlines { get; set; }
         public DbSet<SystemConfig> SystemConfigs { get; set; }
         public DbSet<VisitorStatistic> VisitorStatistics { get; set; }

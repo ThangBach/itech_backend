@@ -13,14 +13,18 @@ namespace Itech.Model.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-        
+
+        [Required]
+        [Column(TypeName = "varchar")]
+        public string Alias { get; set; }
+
         [Required]
         [MaxLength(256)]
         public string Name { get; set; }
 
-        [Required]
-        [Column(TypeName ="varchar")]
-        public string Alias { get; set; }
+        public string Image { get; set; }
+
+        public bool status { get; set; }
 
         public  DateTime? CreateDate { get; set; }
 
@@ -29,8 +33,6 @@ namespace Itech.Model.Models
         public DateTime? UpdateDate { get; set; }
 
         public string UpdateBy { get; set; }
-
-        public bool status { get; set; }
 
         public IEnumerable<Product> Products { get; set; }
     }

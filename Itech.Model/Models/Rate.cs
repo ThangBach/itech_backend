@@ -13,14 +13,13 @@ namespace Itech.Model.Models
         public int ProductId { get; set; }
         [Key]
         [Column(Order = 2)]
-        public int MemberId { get; set; }
+        public string UserName { get; set; }
         public DateTime RateDate { get; set; }
         public int RateNumber { get; set; }
         public string Comment { get; set; }
-
         [ForeignKey("ProductId")]
         public virtual Product Product { get; set; }
-        [ForeignKey("MemberId")]
-        public virtual Member Member { get; set; }
+        [ForeignKey("UserName")]
+        public virtual ApplicationUser User { get; set; }
     }
 }
